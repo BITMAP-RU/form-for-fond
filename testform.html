@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+    <title>On-line пожертвования с сайта</title>
+    <meta itemprop="identifier" content="42">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <meta name="robots" content="index,follow"/>
+
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="/templates/globus/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/templates/globus/vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/templates/globus/vendor/owl-carousel/owl.carousel.css" media="screen">
+    <link rel="stylesheet" href="/templates/globus/vendor/owl-carousel/owl.theme.css" media="screen">
+    <link rel="stylesheet" href="/templates/globus/vendor/magnific-popup/magnific-popup.css" media="screen">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/templates/globus/css/theme.css?1">
+    <link rel="stylesheet" href="/templates/globus/css/theme-blog.css">
+    <link rel="stylesheet" href="/templates/globus/css/theme-elements.css?1">
+    <link rel="stylesheet" href="/templates/globus/css/theme-animate.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/templates/globus/css/theme-responsive.css"/>
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="/templates/globus/css/skins/default.css?1">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/templates/globus/css/custom.css">
+
+    <!-- Head Libs -->
+    <script src="/templates/globus/vendor/modernizr.js"></script>
+
+    <!--[if IE]>
+    <link rel="stylesheet" href="/templates/globus/css/ie.css">
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <script src="/templates/globus/vendor/respond.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        var aveabspath = '/';
+    </script>
+    <script src="/templates/globus/vendor/jquery.js"></script>
+    <script src="/templates/globus/vendor/bootstrap/js/bootstrap.js"></script>
+    <!--script src="//malsup.github.io/min/jquery.form.min.js"></script-->
+
+
+</head>
+<body>
+<div role="main" class="main">
+
+
+    <div class="panel panel-default">
+
+
+        <div class="panel-body" style="padding: 30px 37px 10px;">
+
+            <!--
+            !!!!!!!!!!
+                сохрани скрипты ниже, прежде чем обновлять базу
+                в системных блоках тоже есть скрипты
+            !!!!!!!!!!
+            -->
+
+            <div id="test">
+                <form method="post" id="myform" enctype="multipart/form-data" class="form-group" role="form">
+
+
+                    <p>
+                        Мы будем рады небольшой, но ежемесячной помощи - это позволит нам увереннее чувствовать себя и
+                        надёжнее строить планы нашей работы.
+                    </p>
+                    <div class="form-group" id="block_52" style="display: none">
+                        <label>
+
+                            <input type="hidden" name="form-test[52]" value="0">
+                            <input type="checkbox" name="form-test[52]" value="1" id="fld52"> Сделать пожертвование
+                            регулярным
+                        </label>
+                    </div>
+                    <div class="btn-group-toggle button-wrapper  btn-fill-space" id="recurrentform"  data-toggle="buttons">
+
+                        <label class="btn btn-outline btn-primary mb-2 " >
+                            <input type="radio" name="recurrentoptions" value="1" >  Ежемесячно
+                        </label>
+                        <label class="btn btn-outline btn-primary mb-2 active" >
+                            <input type="radio" name="recurrentoptions" value="0" checked > Разово
+                        </label>
+
+                    </div>
+
+
+
+                    <h4 class="lined">Размер пожертвования</h4>
+                    <div class="btn-group-toggle button-wrapper  btn-fill-space" data-toggle="buttons" id="summform">
+                        <label class="btn btn-outline btn-primary mb-2 active" for="summoptions1">
+                            <input type="radio" name="summoptions" id="summoptions1" value="500" autocomplete="off" data-toggle="button-summ" checked> 500 руб.
+                        </label>
+                        <label class="btn btn-outline btn-primary mb-2">
+                            <input type="radio" name="summoptions" id="summoptions2" value="1000" data-toggle="button" autocomplete="off">
+                            1000 руб.
+                        </label>
+                        <label class="btn btn-outline btn-primary mb-2">
+                            <input type="radio" name="summoptions" id="summoptions3" value="2000" data-toggle="button" autocomplete="off">
+                            2000 руб.
+                        </label>
+                        <label class="btn btn-outline btn-primary mb-2">
+                            <input type="radio" name="summoptions" id="summoptions4" value="3000" data-toggle="button" autocomplete="off">
+                            3000 руб.
+                        </label>
+                        <label class="btn btn-outline btn-primary mb-2">
+                            <input type="radio" name="summoptions" id="summoptions5" value="5000" data-toggle="button" autocomplete="off">
+                            5000 руб.
+                        </label>
+                        <label class="btn btn-outline btn-primary mb-2">
+                            <input type="radio" name="summoptions" id="summoptions6" value="other" data-toggle="button" autocomplete="off">
+                            другая сумма
+                        </label>
+                    </div>
+
+
+                    <input type="text" name="form-test[7]" value="33" id="fld7" class="form-control mb-15"
+                           placeholder="Сумма пожертвования (руб)" style="display: none">
+
+
+
+                    <h4 class="lined">Способ внесения пожертвования</h4>
+                    <div id="system" class="form-group  ">
+                        <select name="form-test[39]" id="fld39" class="form-control ">
+                            <option value="" disabled>-- выбрать --</option>
+                            <option value="0" selected="selected">Банковская карта (Visa, MasterCard, Maestro, МИР,
+                                Google pay)
+                            </option>
+                            <option value="1">PayPal</option>
+                            <option value="2">Сбербанк online</option>
+                        </select>
+                    </div>
+
+
+                    <h4 class="lined">Данные о жертвователе</h4>
+                    <div class="form-group  has-feedback">
+                        <input type="text" name="form-test[1]" value="" id="fld_1" class="form-control"
+                               placeholder="Email *">
+                    </div>
+                    <div class="form-group  has-feedback">
+                        <input type="text" name="form-test[34]" value="" id="fld34" class="form-control"
+                               placeholder="ФИО, псевдоним или организация *">
+                    </div>
+                    <div class="form-group  ">
+                        <input type="text" name="form-test[35]" value="" id="fld35" class="form-control "
+                               placeholder="Введите ваш телефон">
+                    </div>
+
+
+
+                    <h4 class="lined">Цель пожертвования</h4>
+                    <div class="form-group">
+                        <select name="form-test[10]" id="fld10" class="form-control ">
+                            <option disabled>-- выбрать --</option>
+                            <option value="55138">Ермошина Лариса</option>
+                            <option value="49717">Кириченко Петр</option>
+                            <option value="54497">Кузнецова Татьяна</option>
+                            <option value="50993">Мацюк Ирина</option>
+                            <option value="52578">Полушин Олег</option>
+                            <option value="50">Программа №1. Трансплантация костного мозга</option>
+                            <option value="52">Программа №2. Адресная помощь пациентам</option>
+                            <option value="68">Программа №3. Безвозмездное донорство</option>
+                            <option value="45872">Программа №4. Борьба с канцерофобией</option>
+                            <option value="55126">Савина Светлана</option>
+                            <option value="49">Уставная деятельность Фонда</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="hidden" name="form-test[55]" value="0">
+                                <input type="checkbox" name="form-test[55]" checked="checked" value="1" id="fld[55]">
+                                Да, я хочу получать новости от Фонда
+                            </label>
+                        </div>
+
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="hidden" name="form-test[54]" value="0">
+                                <input type="checkbox" name="form-test[54]" checked="checked" value="1" id="fld[54]"> я
+                                даю согласие на <a href="/?sysblock=9" data-toggle="modal" data-target="#myModal">обработку</a>
+                                персональных данных
+                            </label>
+                        </div>
+
+                        <!-- Модальное окно -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button type="submit" id="submitbtn" class="btn btn-primary btn-block mt-20">Пожертвовать
+                        </button>
+                    </div>
+                    <p class="text-center mb-0">
+                        <a href="/offert.html" target="_blank" title="Публичная оферта">Публичная оферта </a> • <a
+                            href="/rassilka.html" target="_blank" title="Правила электронной рассылки">Правила
+                        электронной рассылки Фонда</a> <br/>
+                        оТПИСАТЬСЯ ОТ РЕГУЛЯРНОГО СПИСАНИЯ ВЫ МОЖЕТЕ ПО <STRONG><A
+                            href="https://my.cloudpayments.ru/unsubscribe" title="">ссылке</a></strong></p>
+
+                </form>
+
+<!-- ########################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ######################## ################ ############ ################################ -->
+                <? echo $_GET["summ"]; ?>
+                <script>
+
+                    function formcontrol() {
+
+                        //$('#myform input:radio:checked').each(function () {
+                            //$(this).parent().addClass('active').siblings().removeClass('active');
+                        //});
+                        //console.log(('#myform label.active input').val());
+                        //$('form').find('label.active').each(function () {
+                        //    console.log($(this).find('input').attr("name") + " = " + $(this).find('input').val());
+                        //});
+
+                        $("#recurrentform label[disabled='disabled']").click(function(event) {
+                            console.log("##########stop###########");
+                            event.stopPropagation();
+                        });
+
+                        if ($("#fld39").val() == "0") {
+
+                            $("input#fld52").prop("checked", ($('input:radio[name="recurrentoptions"]:checked').val() == 1) ? true : false);
+                        } else {
+                            $("#fld52").prop("checked", false);
+                            //$("#fld52").checked = false;
+                            console.log("___________paypall_____________");
+
+                            $('#recurrentform label.active').removeClass('active').addClass('active_tmp');
+                            $('#recurrentform label').attr("disabled", true);
+                            //$("#recurrentform label input").attr("disabled", "disabled");
+
+                        }
+
+                        console.log("________________________");
+
+                        console.log ("## rec checkbox = " + $("input#fld52").prop("checked"));
+                        console.log("## payment sys = " + $('#fld39').val());
+                        console.log('## summ = ' + $('input#fld7').val());
+
+                        console.log("recurrent radio = " + $('#recurrentform label').find('input:checked').val());
+                        console.log("summ radio = " + $('#summform label').find('input:checked').val());
+
+
+                    };
+
+                    window.onload = function () {
+
+// есть ли у нас плагин КУУКИ
+                        if( !$.cookie ) {
+                            console.log('cookieNotify: Cookie Function not defined.');
+                        }
+
+                        $.cookie('rekurrent', '1');
+                        $.cookie('pay_sys', '1');
+                        $.cookie('summ', '999');
+                        //console.log($.cookie('name'));
+
+// обрабатываем реккурента со строки и куков
+
+                        if ('<? echo $_GET["rekurrent"]; ?>' == '1' || $.cookie('rekurrent') == '1') {
+                            $("#fld52").prop( "checked", true );
+                            $('input:radio[name="recurrentoptions"]').filter('[value="1"]').attr('checked', true).parent().addClass("active");
+                            $('input:radio[name="recurrentoptions"]').filter('[value="0"]').attr('checked', false).parent().removeClass("active");
+                            //$("#fld39 [value='1'], #fld39 [value='2']").attr('disabled', true);
+                        };
+
+ // обрабатываем платежную систему с куков
+                        $('#fld39').val($.cookie('pay_sys'));
+// обработка суммы пожертвования со строки с куков и защита от пусто
+                        var summ_def = '' || $.cookie('summ');
+                        if (summ_def != '') {
+                            console.log('summ_def = ' + summ_def);
+                        };
+                        $('input#fld7').val(summ_def || $('input[name="summoptions"]:checked').val() || '500');
+
+
+ // поджиг пересчета
+
+                        $("#myform :input").on("change", formcontrol);
+
+                        formcontrol();
+
+
+
+
+
+                        $('input:radio[name="summoptions"]').each(function () {
+                            //console.log($(this).val());
+                        });
+
+
+
+                        //console.log($('input:radio[name="recurrentoptions"]:checked').val());
+
+                        function checkrecurrent() {
+
+                            if ($("#fld39").val() == "0") {
+
+                                $("input#fld52").prop("checked", ($('input:radio[name="recurrentoptions"]:checked').val() == 1) ? true : false);
+                            } else {
+                                $("#fld52").prop("checked", false);
+                                $("#fld52").checked = false;
+                            }
+                            console.log($('input:radio[name="recurrentoptions"]:checked').val());
+
+                        };
+
+
+                        //$('input:radio[name="recurrentoptions"]').change(checkrecurrent);
+
+                        //$("#fld39").on("change", checkrecurrent);
+
+
+
+
+
+                        function checksumm() {
+
+                            if ($('input[name="summoptions"]:checked').val() == 'other') {
+                                $(this).parent().hide();
+                                $('input#fld7').val('').show();
+                                $('input#fld7').focus();
+                            } else {
+                                $('input#fld7').val($('input[name="summoptions"]:checked').val());
+                                $('input#fld7').hide();
+                                $('input[name="summoptions"][value="other"]').parent().show();
+                            }
+                            ;
+                            console.log($('input#fld7').val());
+
+                        };
+
+                        //$('input:radio[name="summoptions"]').change(checksumm);
+
+
+// отключаем Уставную временно!
+                        // $("#fld10 [value='49']").attr('disabled', true).css('display','none');
+
+// если запрос прилетел со страницы соискателя обнуляем selected и выбираем нужного
+                        if ('' != '') {
+
+                            $('#fld10').find('option:selected').attr("selected", false); //снимаем выбранное
+                            $("#fld10 [value='']").attr("selected", "selected");   // выбираем соискателя с которого прилетели
+                            // $("#fld10 [value='']").prop("selected", true);
+
+                            nP = navigator.platform;      // для говноэпла убираем всякое disabled
+                            if (nP == "iPad" || nP == "iPhone" || nP == "iPod" || nP == "iPhone Simulator" || nP == "iPad Simulator") {
+                                $('select option[disabled]').remove();
+                            }
+                        }
+                        ;
+// вставляем поле email со строки
+// вставляем поле "сколько переводить" со строки если пусто то 1000
+                        var summ = '';
+                        //$("#fld7").val((summ != ''? summ:'1000'));
+
+                    };
+
+                    $('#period').find('select  option:selected').attr("selected", false);
+                    $('#fld37').change(function () {
+                        $('#period').toggle();
+                    });
+                    $('#fld39').change(function () {
+                        var el = $(this).val();
+                        $('.block_icons').css('display', 'none');
+                        $('#' + el + '_icons').css('display', 'block');
+                        //console.log (el);
+
+                        $('#block_52').css('display', (el === '0' ? 'block' : 'none'));
+                        /*$('#block_52').css('display',(el === '0' || el === '1' ? 'block' : 'none'));*/
+                    });
+
+
+// функция крассная шапка
+
+                    function checksummheat() {
+                        $('#block_action').css('display', ($("#fld7").val() > 999) ? "block" : "none");
+                        if ($("#fld7").val() > 1999) {
+                            $('#block_quant').css('display', 'block');
+                            $('input#fld43').val(Math.floor($("#fld7").val() / 1000));
+                        } else {
+                            $('#block_quant').css('display', 'none');
+                        }
+                    };
+
+                    $("#fld7").on("change keyup paste", checksummheat);
+
+                    if ($("#fld7").val() > 999) {
+                        checksummheat();
+                    };
+
+                    if ($('#fld42').is(':checked')) {
+                        $("#block_adress").css('display', 'block');
+                    };
+
+                    $('#fld42').change(function () {
+                        $("#block_adress").css('display', ($(this).is(':checked')) ? "block" : "none");
+                    });
+
+
+
+                </script>
+
+
+                <script>
+                    function form_popover() {
+                        $('#test .form-control.invalid').each(function (index, element) {
+                            $(element).popover('show')
+                        });
+                    }
+                    $(function () {
+                        form_popover();
+                    });
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+    <!--li class="well">
+    <p style="margin-bottom: 5px; text-align: center;"><strong>Внимание!&nbsp;</strong>Делая пожертвование на сумму от 1000 рублей, вы автоматически попадаете под действие акции</p>
+
+    <h3 class="text-center" style="margin-bottom:7px; color: red"><a href="/press/news/krasnaya-shapka-protiv-lejkoza.html" style="margin-bottom:0; color: red" target="_blank">&laquo;Красная шапка против лейкоза&raquo;</a></h3>
+
+    <p style="margin-bottom: 0px; text-align: center;">Для доставки мы просим вас указать полные ФИО и обязательно заполнить поля &quot;Телефон&quot; и &quot;Адрес доставки&quot; (автоматически откроется при введении суммы пожертвования от 1000 рублей).&nbsp;Пожалуйста, указывайте ваши полные фамилию, имя и отчество, иначе Почта России не сможет доставить вам шапку!&nbsp;Если вы не получили шапочку в течение месяца, обязательно сообщите нам об этом по адресу <a href="javascript:mt('info','leikozu.net','%23%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F%D0%A8%D0%B0%D0%BF%D0%BA%D0%B0%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%9B%D0%B5%D0%B9%D0%BA%D0%BE%D0%B7%D0%B0%20%D0%BD%D0%B5%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B0','')"><u>info@leikozu.net</u></a></p>
+    </div>
+
+    <p style="text-align: center; font-size:0.9em"><small>По Москве доставка осуществляется бесплатно. Доставка по России осуществляется по тарифам ЕМС Почта России</small></p>
+    </li-->
+
+
+    <!-- ############## Подвал ################# -->
+</div>
+
+<!-- Libs -->
+<script src="/templates/globus/vendor/jquery.cookie.js"></script>
+
+<!-- Theme Initializer -->
+<!--script src="/templates/globus/js/theme.plugins.js"></script>
+<script src="/templates/globus/js/theme.js"></script-->
+
+<!-- Custom JS -->
+<!--script src="/templates/globus/js/custom.js"></script-->
+
+
+</body>
+</html>
